@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Worker
+  - Resource
+  - Ground
+  - Storage
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,8 @@ public class HudManager : MonoBehaviour
     public GameObject buildingBp;
     public GameObject Barrack;
 
+    public GameObject Resources;
+
     private static HudManager instance;
     public static HudManager Instance { get { return instance; } }
 
@@ -69,13 +71,17 @@ public class HudManager : MonoBehaviour
                 break;
         }
     }
-
-
     public void ShapeButton(string Shape)
     {
         foreach (var GameObject in GameObject.FindObjectsOfType<UnitMovement>())
         {
             GameObject.GetComponent<UnitMovement>().shape = Shape;
         }
+    }
+
+
+    public void ChangeText(GameObject textToChange, string change)
+    {
+        textToChange.GetComponent<TextMeshProUGUI>().text = textToChange.GetComponent<TextMeshProUGUI>().text.Substring(0, 7) + change;
     }
 }
