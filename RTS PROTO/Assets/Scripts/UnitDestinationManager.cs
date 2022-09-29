@@ -6,7 +6,6 @@ public class UnitDestinationManager : MonoBehaviour
 {
     public string shape;
     int numberOfIterations;
-    int destinationIndex = 0;
     Vector3 newTemp;
 
     GameObject topLeftHorz;
@@ -20,7 +19,7 @@ public class UnitDestinationManager : MonoBehaviour
 
     List<Vector3> DestinationPoint;
 
-    public void CreateWalkableArea(GameObject gameObject, Vector3 startPosition, string shape)
+    public void CreateWalkableArea(GameObject gameObject, Vector3 startPosition, string shape, int iterationNumber)
     {
         Vector3 topLeft = new Vector3();
         Vector3 topRight = new Vector3();
@@ -43,7 +42,7 @@ public class UnitDestinationManager : MonoBehaviour
         }
         else
         {
-            DestinationPoint = gameObject.GetComponent<UnitMovement>().DestinationPoint;
+            DestinationPoint = gameObject.GetComponent<UnitMovement>().ListOfDestinations[iterationNumber];
         }
 
         for (int i = 0; i < numberOfIterations; i++)

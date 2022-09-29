@@ -8,6 +8,7 @@ TagManager:
   - Resource
   - Ground
   - Storage
+  - Construction
   layers:
   - Default
   - TransparentFX
@@ -19,8 +20,8 @@ TagManager:
   - Ground
   - Clickeable
   - Buildings
-  - 
-  - 
+  - Unknown Terrain
+  - FogOfWar
   - 
   - 
   - 
@@ -44,4 +45,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Secondary
+    uniqueID: 3416424445
     locked: 0

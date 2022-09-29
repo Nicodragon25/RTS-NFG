@@ -98,6 +98,8 @@ GameObject:
   - component: {fileID: -3097938744660430062}
   - component: {fileID: 2982905768510824594}
   - component: {fileID: 4325086383533692444}
+  - component: {fileID: -3868397573435924591}
+  - component: {fileID: 4076501042305637456}
   m_Layer: 8
   m_Name: Infantry1
   m_TagString: Untagged
@@ -208,8 +210,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a74d3286adbe3ac4195d5e99fd93e811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileTestEdge: {fileID: 4475125179544453094, guid: 62b44754478221446a460421ec3dacf5, type: 3}
-  TileTestCorner: {fileID: 4475125179544453094, guid: 2f4a6f17b58c3a14dbc53f873fdd90bd, type: 3}
+  destinationFlag: {fileID: 6277685343128892890, guid: fec6769ac17e6464095dd6f4cbc80ced, type: 3}
+  DestinationPoint: []
+  nextPos: []
+  thirdPos: []
   ground:
     serializedVersion: 2
     m_Bits: 128
@@ -236,3 +240,72 @@ NavMeshAgent:
   m_BaseOffset: 0.4
   m_WalkableMask: 5
   m_ObstacleAvoidanceType: 0
+--- !u!114 &-3868397573435924591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2528340055122874027}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 0.47651407, g: 0.9150943, b: 0.12517802, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!331 &4076501042305637456
+SpriteMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2528340055122874027}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 15d0c3709176029428a0da2f8cecf0b5, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_MaskAlphaCutoff: 0.2
+  m_FrontSortingLayerID: 0
+  m_BackSortingLayerID: 0
+  m_FrontSortingLayer: 0
+  m_BackSortingLayer: 0
+  m_FrontSortingOrder: 1
+  m_BackSortingOrder: -1
+  m_IsCustomRangeActive: 0
+  m_SpriteSortPoint: 0

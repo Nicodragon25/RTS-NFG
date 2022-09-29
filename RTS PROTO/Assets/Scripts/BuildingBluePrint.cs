@@ -14,6 +14,10 @@ public class BuildingBluePrint : MonoBehaviour
     public Material cantBuildMat;
 
     bool canBuild = true;
+    [SerializeField] int goldCost;
+    [SerializeField] int woodCost;
+    [SerializeField] int stoneCost;
+    [SerializeField] int ironCost;
     private void Start()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -38,7 +42,10 @@ public class BuildingBluePrint : MonoBehaviour
             //if (hit.collider.name == "Ground") canBuild = true;
             //else canBuild = false;
         }
-
+        if (TotalResources.totalResources.gold >= goldCost && TotalResources.totalResources.wood >= woodCost && TotalResources.totalResources.iron >= ironCost && TotalResources.totalResources.stone >= stoneCost)
+            canBuild = true;
+        else
+            canBuild = false;
         if (Input.GetMouseButtonDown(0))
         {
             if (canBuild)

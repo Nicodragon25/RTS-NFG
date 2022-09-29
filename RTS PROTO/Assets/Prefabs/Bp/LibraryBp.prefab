@@ -209,12 +209,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f02686a154374745a0480ac8344af4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5826107780847889646, guid: 111fe780e233cd54184fc3da95c3d245, type: 3}
+  prefab: {fileID: 5826107780847889646, guid: bac1b62bd60560f49993453e70b5df82, type: 3}
   ground:
     serializedVersion: 2
     m_Bits: 896
   canBuildMat: {fileID: 2100000, guid: 7567e863d4af38f4cb9cedd30b40ca76, type: 2}
   cantBuildMat: {fileID: 2100000, guid: c201e3aa461964d4085b3bf084fd92ff, type: 2}
+  goldCost: 0
+  woodCost: 0
+  stoneCost: 0
+  ironCost: 0
 --- !u!54 &-7158183134761561840
 Rigidbody:
   m_ObjectHideFlags: 0

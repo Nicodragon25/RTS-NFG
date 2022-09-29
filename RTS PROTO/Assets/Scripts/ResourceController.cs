@@ -8,11 +8,7 @@ public class ResourceController : MonoBehaviour
     public float resourceHp;
     public float resourceSize;
 
-    public enum ResourceTypes
-    {
-        Gold, Iron, Wood
-    }
-    public ResourceTypes ResourceType;
+    public string resourceType;
     void Update()
     {
         

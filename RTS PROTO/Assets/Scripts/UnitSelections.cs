@@ -24,6 +24,7 @@ public class UnitSelections : MonoBehaviour
         DeselectAll();
         unitSelected.Add(unitToAdd);
         unitToAdd.transform.GetChild(0).gameObject.SetActive(true);
+        unitToAdd.GetComponent<Outline>().enabled = true;
         if (unitToAdd.GetComponent<UnitMovement>() != null) unitToAdd.GetComponent<UnitMovement>().enabled = true;
         if (unitToAdd.GetComponent<WorkerMovement>() != null) unitToAdd.GetComponent<WorkerMovement>().enabled = true;
     }
@@ -33,18 +34,21 @@ public class UnitSelections : MonoBehaviour
         {
             unitSelected.Add(unitToAdd);
             unitToAdd.transform.GetChild(0).gameObject.SetActive(true);
+            unitToAdd.GetComponent<Outline>().enabled = true;
             if (unitToAdd.GetComponent<UnitMovement>() != null) unitToAdd.GetComponent<UnitMovement>().enabled = true;
             if (unitToAdd.GetComponent<WorkerMovement>() != null) unitToAdd.GetComponent<WorkerMovement>().enabled = true;
         }
     }
-    public void ControlClickDeselect(GameObject unitToRemove)
+    public void ControlClickDeselect(GameObject unitToDeselect)
     {
-        if(unitSelected.Contains(unitToRemove))
+        if(unitSelected.Contains(unitToDeselect))
         {
-            if (unitToRemove.GetComponent<UnitMovement>() != null) unitToRemove.GetComponent<UnitMovement>().enabled = false;
-            if (unitToRemove.GetComponent<WorkerMovement>() != null) unitToRemove.GetComponent<WorkerMovement>().enabled = false;
-            unitToRemove.transform.GetChild(0).gameObject.SetActive(false);
-            unitSelected.Remove(unitToRemove);
+            if (unitToDeselect.GetComponent<UnitMovement>() != null) unitToDeselect.GetComponent<UnitMovement>().enabled = false;
+            if (unitToDeselect.GetComponent<WorkerMovement>() != null) unitToDeselect.GetComponent<WorkerMovement>().enabled = false;
+            unitToDeselect.transform.GetChild(0).gameObject.SetActive(false);
+            unitToDeselect.GetComponent<Outline>().enabled = false;
+
+            unitSelected.Remove(unitToDeselect);
         }
     }
     public void DragSelect(GameObject unitToAdd)
@@ -53,8 +57,8 @@ public class UnitSelections : MonoBehaviour
         {
             unitSelected.Add(unitToAdd);
             unitToAdd.transform.GetChild(0).gameObject.SetActive(true);
-            
-            if(unitToAdd.GetComponent<UnitMovement>() != null) unitToAdd.GetComponent<UnitMovement>().enabled = true;
+            unitToAdd.GetComponent<Outline>().enabled = true;
+            if (unitToAdd.GetComponent<UnitMovement>() != null) unitToAdd.GetComponent<UnitMovement>().enabled = true;
             if(unitToAdd.GetComponent<WorkerMovement>() != null) unitToAdd.GetComponent<WorkerMovement>().enabled = true;
         }
     }
@@ -64,6 +68,8 @@ public class UnitSelections : MonoBehaviour
         {
             unitSelected.Remove(unitToDeselect);
             unitToDeselect.transform.GetChild(0).gameObject.SetActive(false);
+            unitToDeselect.GetComponent<Outline>().enabled = false;
+
             if (unitToDeselect.GetComponent<UnitMovement>() != null) unitToDeselect.GetComponent<UnitMovement>().enabled = false;
             if (unitToDeselect.GetComponent<WorkerMovement>() != null) unitToDeselect.GetComponent<WorkerMovement>().enabled = false;
         }
@@ -74,7 +80,8 @@ public class UnitSelections : MonoBehaviour
         foreach (var unit in unitSelected)
         {
             unit.transform.GetChild(0).gameObject.SetActive(false);
-            if(unit.GetComponent<UnitMovement>() != null) unit.GetComponent<UnitMovement>().enabled = false;
+            unit.GetComponent<Outline>().enabled = false;
+            if (unit.GetComponent<UnitMovement>() != null) unit.GetComponent<UnitMovement>().enabled = false;
             if(unit.GetComponent<WorkerMovement>() != null) unit.GetComponent<WorkerMovement>().enabled = false;
         }
         unitSelected.Clear();

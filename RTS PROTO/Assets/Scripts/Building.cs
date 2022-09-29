@@ -8,12 +8,6 @@ public class Building : MonoBehaviour
     RaycastHit hit;
     public LayerMask Buildings;
 
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

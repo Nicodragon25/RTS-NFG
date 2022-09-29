@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: -3097938744660430062}
   - component: {fileID: 2982905768510824594}
   - component: {fileID: 4325086383533692444}
+  - component: {fileID: -7394199423851417669}
   m_Layer: 8
   m_Name: Tank
   m_TagString: Untagged
@@ -208,8 +209,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a74d3286adbe3ac4195d5e99fd93e811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileTestEdge: {fileID: 4475125179544453094, guid: 62b44754478221446a460421ec3dacf5, type: 3}
-  TileTestCorner: {fileID: 4475125179544453094, guid: 2f4a6f17b58c3a14dbc53f873fdd90bd, type: 3}
+  destinationFlag: {fileID: 0}
+  DestinationPoint: []
+  nextPos: []
+  thirdPos: []
   ground:
     serializedVersion: 2
     m_Bits: 128
@@ -236,3 +239,21 @@ NavMeshAgent:
   m_BaseOffset: 0.4
   m_WalkableMask: 5
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-7394199423851417669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2528340055122874027}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.4784314, g: 0.91372555, b: 0.1254902, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
